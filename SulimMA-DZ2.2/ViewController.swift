@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenLabel: UILabel!
     @IBOutlet weak var blueLabel: UILabel!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -29,7 +28,6 @@ class ViewController: UIViewController {
         blueLabel.text = "\(blueSlider.value)"
         
         colorBar.backgroundColor = UIColor.init(displayP3Red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(blueSlider.value), alpha: 1)
-        
     }
 
     @IBAction func redSliderMove(_ sender: UISlider) {
@@ -46,7 +44,5 @@ class ViewController: UIViewController {
         blueLabel.text = String(format: "%.2f", sender.value)
         colorBar.backgroundColor = UIColor.init(displayP3Red: CGFloat(redSlider.value), green: CGFloat(greenSlider.value), blue: CGFloat(sender.value), alpha: 1)
     }
-    
-    
 }
 
